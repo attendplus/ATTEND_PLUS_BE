@@ -1,0 +1,17 @@
+[project]
+name = "module-core"
+version = "0.1.0"
+description = "ATTEND PLUS shared core module"
+requires-python = ">=3.14"
+dependencies = [
+    "pydantic-settings",
+    "asyncpg"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["src/module_core"]
+sources = ["src"]

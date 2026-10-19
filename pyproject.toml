@@ -1,0 +1,25 @@
+[project]
+name = "attend-plus"
+version = "0.1.0"
+description = "ATTEND PLUS school attendance backend"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "module-student",
+    "module-teacher",
+    "module-admin",
+    "module-core",
+    "sqlalchemy[asyncio]",
+    "python-multipart>=0.0.32",
+    "alembic>=1.20.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+module-student = { path = "module-student", editable = true }
+module-teacher = { path = "module-teacher", editable = true }
+module-admin = { path = "module-admin", editable = true }
+module-core = { path = "module-core", editable = true }
