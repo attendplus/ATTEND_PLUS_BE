@@ -114,7 +114,7 @@ def dynamic_query_logger(conn, cursor, statement, parameters, context, executema
         except Exception:
             ctx: Dict[str, Any] = {}
 
-        ctx_id: str = ctx.get("ctx_id_id", "UNKNOWN_ID")
+        ctx_id: str = ctx.get("ctx_id", "UNKNOWN_ID")
         ip: str = ctx.get("ip", "UNKNOWN_IP")
         service: str = ctx.get("service", "UNKNOWN_SERVICE")
         router: str = ctx.get("router", "UNKNOWN_ROUTER")
